@@ -11,7 +11,7 @@ System.out.println(); -> After printing the data the cursor is shifted to next p
 
 # TOKENS:- The smallest part of java program
 Types:-
-1. Keywords:- Words with predefined meaning. 
+1. Keywords:- Words with predefined meaning. (50+ keywords)
               It is also known as compiler aware words. 
               They should always be in lowercase. 
               In java we have 50+ keywords(eg:- class, public, static, void).
@@ -39,7 +39,20 @@ Types:-
 () - separate equations, method declaration, write conditions
 ; - end of statement
 , - separate variables
-. - reference
+. - separate reference
+
+5.Operators:- Symbol which represents particular operations
+Types:-
+1.Uniary:- 1.increment operator -> 1. Pre-increment 2. Post-increment
+           2.decrement operator -> 1. Pre-decrement 2. Post-decrement
+           3.logical not operator
+
+2.Binary:- 1.Arithmetic operator
+           2.Relational operator
+           3.Logical AND operator
+           4.Logical OR operator
+
+3.Ternary:- Conditional operator
 
 # DataTypes:- What type of data we are storing inside any variable
 1. Primitive:- Inbuilt datatype, have fixed size. (byte,short,int,long | float,double | char | boolean)
@@ -62,3 +75,46 @@ local varibable:- A variable which is declared inside local area.
                   local varible can be used only inside same local area.
 
 Gloal variables: - We can use global variables inside global as well as local area.
+
+pre-increment operator steps:- 1.Increase the value by 1.
+                               2.Update the incremented value in same variable.
+                               3.If any operation is going on, will have to use the incremented value.
+
+# Question
+Q. Difference b/w primitive and non primitive data types?
+-> Primitive data type has fixed size, they are pre defined. 
+-> Non-primitive does not have fixed value and they are user defined.
+
+
+Q. Difference b/w local and global variable?
+-> local varibables can only be declared in local area. It cannot be used without initialisation. It can only be used in local area. We cannot create two local variables with same name.
+-> Global varivables are declared in global area. It can be used inside gloabal as well as local area.
+
+
+Q. Difference b/w compiler and Interpreter?
+-> Compiler translates the high level code into machine code(byte code) before execution.
+-> Interpreter translates and executes the code line by line at runtime.
+
+Q. Difference b/w platform independent and platform dependent?
+-> Platform-dependent software runs only on specific operating systems/hardware (like C/C++ compiled to native code)
+-> Platform-independent software runs anywhere via an intermediary like a Virtual Machine (JVM for Java), allowing "write once, run anywhere" for Java, Python, etc.
+
+Q. How does object oriented nature of java helps in software development?
+-> Object-oriented programming (OOP) in Java accelerates software development by promoting code reusability through inheritance and composition, allowing new classes to inherit features from existing ones.
+
+Q. Why java is considered simple language compared to c or c++?
+-> Java is considered simpler than C or C++ due to a variety of design choices that reduce complexity for the programmer, such as automatic memory management (garbage collection), fewer language features, and a stronger emphasis on object-oriented programming.
+
+Q. How does java provide security at runtime?
+-> Java provides security at runtime through a multi-layered architecture centered around the Java Virtual Machine (JVM), which includes bytecode verification, a security sandbox, and extensive security APIs.
+
+Q. What makes java as robust language?
+-> Java is considered a robust language due to features that emphasize early error detection, effective error management, and reliable memory handling.
+
+Q. How does java acheive high performance?
+-> Through the Just-In-Time (JIT) compilation process and the sophisticated optimizations within the Java Virtual Machine (JVM).
+
+Q. What do you mean by portability in java?
+-> In Java, portability refers to the ability to compile a program's source code into a machine-independent bytecode on one machine and then run that same bytecode on any other device or operating system that has a compatible Java Virtual Machine (JVM) installed, without needing to recompile the code.
+
+Q. Why does java have strong industry adoption and job opportunities?

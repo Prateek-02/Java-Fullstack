@@ -1,5 +1,3 @@
-
-
 public class Questions {
     public static void main(String[] args) {
         //1. write a java program to claculate area of square whose side is 4.2;
@@ -17,6 +15,27 @@ public class Questions {
         int b = 5;
         double area3 = l*b;
         System.out.println("Area of rectangle is: " + area3);
+
+
+        //4. swap two varibles using 3rd variable
+        int num1 = 3;
+        int num2 = 5;
+        int temp;
+        temp = num1;
+        num1 = num2;
+        num2 = temp;
+        System.out.println(num1 + " " + num2);
+
+        //5. swap two varibles without 3rd variable
+        int x = 15;
+        int y = 20;
+        x = x^y;
+        y = y^x;
+        x = x^y;
+        System.out.println(x + " " + y);
+
+        
+
         
 
     }
