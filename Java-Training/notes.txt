@@ -1,0 +1,64 @@
+Workflow of java code => Code -> compiler -> byte code -> JVM(JIT + Interpreter) -> binary code
+Java is a high level language which is easily readable, understandable and instructable by programmer.
+It is platform independent, because in java source code is converted into byte code which is easily executable in any platform which has JVM.
+JVM - JVM stands for java virtual machine. It does not exists physically. It is used to convert byte code into binary code. It consists of JIT and Interpreter.
+JRE - JRE stands for java runtime environment. It exists physically. It is used to provide environment to run the java program.
+JDK - JDK stands for java development kit. It exists physically. It provides an environment to run as well as to develop a java program.
+
+# Printing statements
+System.out.print(); -> After printing the data the cursor is shifted to next position in same line.
+System.out.println(); -> After printing the data the cursor is shifted to next position in new line.
+
+# TOKENS:- The smallest part of java program
+Types:-
+1. Keywords:- Words with predefined meaning. 
+              It is also known as compiler aware words. 
+              They should always be in lowercase. 
+              In java we have 50+ keywords(eg:- class, public, static, void).
+
+2. Identifier:- The name given by programmer. (cannot use keyword or space, should not start with number, special characters are not allowed except _ and $) (eg:- class name, variable name, method names, package name)
+
+3. Literals:- The value or data given by programmer.
+Types:-
+1.Number:- Integer and Floating number.
+
+2.Character:- It is used to represent a single data. 
+              It is enclosed inside single quotes.
+              Length of character literal is one. 
+              It can have lowercase, uppercase, single digits, all type of special characters.
+
+3.String: - It is used to represent group of characters. 
+            It is enclosed inside double quotes. 
+            The length of string literal can br anything
+
+4.Boolean - It gives us only 2 values, either true or false.
+
+4.Separators:- To Separate java members.
+Types:- 
+{} - to separate block
+() - separate equations, method declaration, write conditions
+; - end of statement
+, - separate variables
+. - reference
+
+# DataTypes:- What type of data we are storing inside any variable
+1. Primitive:- Inbuilt datatype, have fixed size. (byte,short,int,long | float,double | char | boolean)
+2. Non-Primitive:- Does not have fixed size. (string,classname,arrays)
+
+# Types of variables:-
+1. Based on datatype:- 1. Primitive
+                       2. Non- Primitive
+
+2. Based on scope:- 1. Local variable(declared in local area or method area)
+                    2. Global variable(declared in class area or global)
+
+static variable:- A varivable which is declared inside class or global area prefixed with static keyword.
+non static variable: - A varible which is declared inside class or global area without static keyword.
+
+local varibable:- A variable which is declared inside local area. 
+                  We cannot use local variables without initialisation. 
+                  Local variables are not assigned with default values.
+                  We cannot create two local variables with same name.
+                  local varible can be used only inside same local area.
+
+Gloal variables: - We can use global variables inside global as well as local area.
