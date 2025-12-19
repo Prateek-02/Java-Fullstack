@@ -16,7 +16,7 @@ Types:-
               They should always be in lowercase. 
               In java we have 50+ keywords(eg:- class, public, static, void).
 
-2. Identifier:- The name given by programmer. (cannot use keyword or space, should not start with number, special characters are not allowed except _ and $) (eg:- class name, variable name, method names, package name)
+2. Identifier:- The name given by programmer. (cannot use keyword or character space, should not start with number, special characters are not allowed except _ and $) (eg:- class name, variable name, method names, package name)
 
 3. Literals:- The value or data given by programmer.
 Types:-
@@ -62,17 +62,17 @@ Types:-
 1. Based on datatype:- 1. Primitive
                        2. Non- Primitive
 
-2. Based on scope:- 1. Local variable(declared in local area or method area)
-                    2. Global variable(declared in class area or global)
+2. Based on scope:- 1. Local variable(declared in local block or method block)
+                    2. Global variable(declared in class block or global)
 
 static variable:- A varivable which is declared inside class or global area prefixed with static keyword.
 non static variable: - A varible which is declared inside class or global area without static keyword.
 
-local varibable:- A variable which is declared inside local area. 
+local varibable:- A variable which is declared inside local block. 
                   We cannot use local variables without initialisation. 
                   Local variables are not assigned with default values.
                   We cannot create two local variables with same name.
-                  local varible can be used only inside same local area.
+                  local varible can be used only inside same local block.
 
 Gloal variables: - We can use global variables inside global as well as local area.
 
@@ -117,4 +117,13 @@ Q. How does java acheive high performance?
 Q. What do you mean by portability in java?
 -> In Java, portability refers to the ability to compile a program's source code into a machine-independent bytecode on one machine and then run that same bytecode on any other device or operating system that has a compatible Java Virtual Machine (JVM) installed, without needing to recompile the code.
 
-Q. Why does java have strong industry adoption and job opportunities?
+# Arithmetic Operators
+(Addititon)
+byte + byte -> CTE
+short + short -> CTE
+int + int -> success
+long + long -> success
+float + float -> success
+double + double -> success
+char + char -> CTE
+string + string -> concat

@@ -34,10 +34,6 @@ public class Questions {
         x = x^y;
         System.out.println(x + " " + y);
 
-        
-
-        
-
     }
 }
 
