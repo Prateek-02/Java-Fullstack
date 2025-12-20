@@ -127,3 +127,37 @@ float + float -> success
 double + double -> success
 char + char -> CTE
 string + string -> concat
+
+# Typecasting
+1. Primitive (Not Recommended)
+    Types:- 1.Widening(Implicitly done by the compiler);
+            2.Narrowing(Explicit);
+
+2. Non - Primitive (Highly Recommended)
+
+# Widening(implicit)
+byte < short OR char < int < long < float < double (float is greater than long)
+value to char is not possible, but char to value is possible
+
+# Narrowing(Explicit)
+double > float > long > int > short OR char > byte 
+
+eg:- int i = 150;
+     byte b = (byte) i;  '(range of byte is  -128 to 127 means total 256)
+     byte value = int value − 256  (if int > 127)
+
+
+# Scanner class
+steps:- 1. import java.util.Scanner;
+        2. Declare Scanner class object (We can declare it in class block as well as method block)
+
+        Scanner obj_ref_name = new Scanner(System.in)
+
+-> If you are taking int input and then string input(obj.nextLine()) you have to create a dummy. Also when we use next() and then nextLine() we have to create a dummy;
+e.g:- 1. a = obj.nextInt();
+         obj.nextLine();
+         b = obj.nextLine();  //group of words
+
+      2. a = obj.next();   //single word
+         obj.nextLine();
+         b = obj.nextLine();
