@@ -161,3 +161,5 @@ e.g:- 1. a = obj.nextInt();
       2. a = obj.next();   //single word
          obj.nextLine();
          b = obj.nextLine();
+
+-> To stop resource leak we have to close the object with obj.close().
