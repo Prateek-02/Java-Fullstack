@@ -163,3 +163,26 @@ e.g:- 1. a = obj.nextInt();
          b = obj.nextLine();
 
 -> To stop resource leak we have to close the object with obj.close().
+
+# Control statements
+1. Decision making:- 1. if
+                     2. if else
+                     3. if else ladder
+                     4. switch // boolean,float,double and long cannot be used in switch case value or key value as per IT convention;
+                     5. nested if
+
+2. Looping:-  1. for loop  // entry check loop
+              2. while loop   // entry check loop
+              3. do while loop  //exit check loop
+              4. for each loop
+              5. nested loop
+
+3. Jumping:- 1. break
+             2. continue
+             3. return
+
+# Main attributes of software Engg.
+1. Maintainability
+2. Portability
+3. Scalability
+4. Security
