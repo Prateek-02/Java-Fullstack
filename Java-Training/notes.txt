@@ -173,7 +173,7 @@ e.g:- 1. a = obj.nextInt();
 
 2. Looping:-  1. for loop  // entry check loop
               2. while loop   // entry check loop
-              3. do while loop  //exit check loop
+              3. do while loop :- Even the condition is false it will execute one time   //exit check loop
               4. for each loop
               5. nested loop
 
@@ -186,3 +186,8 @@ e.g:- 1. a = obj.nextInt();
 2. Portability
 3. Scalability
 4. Security
+
+#Loops
+when the condition is <= , < -> increment(going forward)
+when the condition is >= , > -> decrement(going backward)
+
