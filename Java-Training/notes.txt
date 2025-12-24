@@ -191,3 +191,81 @@ e.g:- 1. a = obj.nextInt();
 when the condition is <= , < -> increment(going forward)
 when the condition is >= , > -> decrement(going backward)
 
+#methods
+-> block of memory
+syntax:- [Access modifier] [modifier] return type method name (formal args)
+         Access modifier, modifier and formal args are not mandatory
+
+Method Terminology:- 1. Method signature:- method name along with formal arguments
+                     2. Method declaration: - access modifier and modifier
+                     3. Method definition
+
+Method Definition:- 1.Method declaration
+                    2.Method block(Implementation/Body)
+
+Access Modifiers:- 1.private:- Access within class
+                   2.public:- can be accessed from anywhere(within class, package to package)
+                   3.protected:- direct approach is not possible, use inheritance
+                   4.default:- can be accessed anywhere
+
+Modifier:- It is a modifier,It is a keyword, Behaviour of the method(user defined)
+           1.static
+           2.final
+           3.synchronizes
+           4.volatile
+           5.transient
+-> if static is removed or absent then it is non-static
+
+Return type:- Used to return the data back to the method block
+              2 types:- 1. void :- It is a keyword, It does not return any value back to the method block
+                        2. datatype
+->return type can be class(user defined) also can be in-built class.
+
+user defined methods:- 
+1. non parameterized:- 1.method without arguments and without return statement
+                       ->syntax:- [Access modifier] [modifier] return type(void) method name()
+                       {
+
+                       }
+
+                       2.method without arguments but with return statement
+                       ->syntax:- [Access modifier] [modifier] return type(data type) method name()
+                       {
+                        return statement;
+                       }
+
+2. parameterized:- 1.method with arguments but without return statement
+                   ->syntax:- [Access modifier] [modifier] return type(void) method name(datatype var/user definded class obj/Inbuilt class obj)
+                   {
+                        local variable->class obj(user/Inbuilt)
+                   }
+
+                   2.method with arguments and return statement
+                   ->syntax:- [Access modifier] [modifier] return type(data type) method name(datatype var/user definded class obj/Inbuilt class obj)
+                   {
+                        local variable->class obj(user/Inbuilt)
+                        return statement;
+                   }
+
+->method chaining:- Method chaining is a programming technique in Java where one objects calls other object and so on, and the one method should be called atleast 1 time in main method.
+eg:- public class method1 {
+    public static void main(String[] args) {
+        System.out.println("Start");  //prints start
+        demo1();   // go to demo1 method
+        System.out.println("End"); //prints End
+    }
+
+    public static void demo1(){
+        System.out.println("Demo1() method"); // prints Demo1() method
+        demo2(); // go to demo2 method
+        // after coming from demo2 method go back to main method
+    }
+
+    public static void demo2(){
+        System.out.println("Demo2() method"); // prints Demo2() method, go back to demo1() method
+        
+    }
+}
+
+
+
