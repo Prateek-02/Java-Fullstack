@@ -1,4 +1,4 @@
-public class Q7 {
+class Q7 {
     public static void main(String[] args) {
         double orderAmount = 499.00;
         double paidAmount = 499.00;

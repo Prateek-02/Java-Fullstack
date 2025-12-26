@@ -1,4 +1,4 @@
-public class Q11 {
+class Q11 {
     public static void main(String[] args) {
         char ch = 'i';
         boolean UC = ch >= 'A' && ch <= 'Z';

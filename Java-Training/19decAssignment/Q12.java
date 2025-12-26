@@ -1,4 +1,4 @@
-public class Q12 {
+class Q12 {
     public static void main(String[] args) {
         double principalAmount = 500000;
         double rate = 10.0;

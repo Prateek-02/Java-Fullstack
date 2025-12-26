@@ -267,5 +267,6 @@ eg:- public class method1 {
     }
 }
 
+-> We cannot call void methods in parameterized method.
 
 

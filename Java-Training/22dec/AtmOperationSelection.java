@@ -47,6 +47,7 @@ public class AtmOperationSelection {
                     break;
                 case 4:
                     System.out.println("Exited");
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Enter a valid choice");

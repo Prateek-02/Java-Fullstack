@@ -1,4 +1,4 @@
-public class Q6 {
+class Q6 {
     public static void main(String[] args) {
         int currPrice =  199;
         int prevPrice = 299;

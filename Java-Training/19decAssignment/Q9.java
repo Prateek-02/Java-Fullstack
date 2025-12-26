@@ -1,4 +1,4 @@
-public class Q9 {
+class Q9 {
     public static void main(String[] args) {
         int dateOfDelivery = 13;
         int currDate = 20;

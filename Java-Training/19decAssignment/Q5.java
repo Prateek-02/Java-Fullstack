@@ -1,4 +1,4 @@
-public class Q5 {
+class Q5 {
     public static void main(String[] args) {
         int currDate = 19;
         int expDate = 29;
