@@ -269,4 +269,11 @@ eg:- public class method1 {
 
 -> We cannot call void methods in parameterized method.
 
+# Arrays
 
+-> It is a continuous block of memory which stores group of elements or values.
+Characteristics:- 1. It is fixed in size.
+                  2. It is contiguous.
+                  3. It stores data of same type.
+                  4. Index starts with 0 and ends with length-1.
+                  5. It accepets duplicate elements also.
