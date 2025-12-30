@@ -65,7 +65,7 @@ Types:-
 2. Based on scope:- 1. Local variable(declared in local block or method block)
                     2. Global variable(declared in class block or global)
 
-static variable:- A varivable which is declared inside class or global area prefixed with static keyword.
+static variable:- A variable which is declared inside class or global area prefixed with static keyword.
 non static variable: - A varible which is declared inside class or global area without static keyword.
 
 local varibable:- A variable which is declared inside local block. 
@@ -143,7 +143,7 @@ value to char is not possible, but char to value is possible
 double > float > long > int > short OR char > byte 
 
 eg:- int i = 150;
-     byte b = (byte) i;  '(range of byte is  -128 to 127 means total 256)
+     byte b = (byte) i;  (range of byte is  -128 to 127 means total 256)
      byte value = int value − 256  (if int > 127)
 
 
