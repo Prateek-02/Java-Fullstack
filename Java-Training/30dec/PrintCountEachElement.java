@@ -13,7 +13,21 @@ public class PrintCountEachElement {
             arr[i] = sc.nextInt();
         }
 
-        
+         for(int i=0;i<size;i++){
+            int count=1;
+            if(vis[i]){
+                continue;
+            }
+            for(int j=i+1;j<size;j++){
+                if(arr[i]==arr[j]){
+                    count++;
+                    vis[j]=true;
+                }
+            }
+            System.out.println(arr[i]+" is appeared for : "+count+" times");
+        }
+
+
 
         
     }
