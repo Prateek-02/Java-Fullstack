@@ -25,6 +25,8 @@ public class PrintCountEachElement {
                 }
             }
             System.out.println(arr[i]+" is appeared for : "+count+" times");
+
+            sc.close();
         }
 
 
