@@ -1,0 +1,7 @@
+public class MarkerDriver1 {
+    public static void main(String[] args) {
+        Marker.name = "Blue";
+        System.out.println(Marker.name);
+        Marker.show();
+    }
+}
