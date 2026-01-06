@@ -29,7 +29,7 @@ Types:-
 
 3.String: - It is used to represent group of characters. 
             It is enclosed inside double quotes. 
-            The length of string literal can br anything
+            The length of string literal can be anything
 
 4.Boolean - It gives us only 2 values, either true or false.
 
@@ -277,3 +277,9 @@ Characteristics:- 1. It is fixed in size.
                   3. It stores data of same type.
                   4. Index starts with 0 and ends with length-1.
                   5. It accepets duplicate elements also.
+        
+#Constructor:- It is a special method. It is a non-static member. It has same name as class. It has no return type. It can accept parameters to initialize object properties.
+
+1.default :- when user do no create a constructor, compiler by default creates a constructor and initialize the data members of the class with default value.
+2.parameterized:- constructor with formal arguments. it can be created N number of times but the datatype of the formal arguments should be different.It has constructor overloading.
+3.Non-parameterized:- constructor without formal arguments, it can only be created once.
