@@ -283,3 +283,40 @@ Characteristics:- 1. It is fixed in size.
 1.default :- when user do no create a constructor, compiler by default creates a constructor and initialize the data members of the class with default value.
 2.parameterized:- constructor with formal arguments. it can be created N number of times but the datatype of the formal arguments should be different.It has constructor overloading.
 3.Non-parameterized:- constructor without formal arguments, it can only be created once.
+
+-> this keyword can only access current class attributes. It belongs to non-static. It can provide the current class address.
++ -> public member
+- -> private member
+# -> protected member
+
+# Encapsulation:- It is used to restrict the access. Binding data members and methods together.
+-> Setters and Getters:- For each private data memebers, there is one setter and getter;
+getter() -> it is used the data.
+            Syntax:- [Access modifier] data type getName(){}
+            return type is private data type.
+            
+e.g:- 
+public class Person {
+    private String name; // Private field
+
+    // Getter for 'name'
+    public String getName() {
+        return name; // Returns the value
+    }
+}
+
+setter() -> It is used for update or modify value.
+            Syntax:- [Access modifier] void setName(datatype var/classname obj){}
+            return type is void
+
+e.g:- 
+public class Person {
+    private String name; // Private field
+
+    // Getter for 'name'
+    public void setName(String newName) {
+        if (newName != null && !newName.isEmpty()) { // Validation logic
+            this.name = newName; // Assigns the value
+        }
+    }
+}
