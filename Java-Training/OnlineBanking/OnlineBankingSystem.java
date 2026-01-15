@@ -38,8 +38,8 @@ public class OnlineBankingSystem {
         target.deposit(amount);  
 
         System.out.println("Transaction successful!");
-        System.out.println("Updated balance of " + sourceAccNo + ": " + source.getBalance());
-        System.out.println("Updated balance of " + targetAccNo + ": " + target.getBalance());
+        System.out.println("Updated balance of " + sourceAccNo + ": " + (int)source.getBalance());
+        System.out.println("Updated balance of " + targetAccNo + ": " + (int)target.getBalance());
     }
 
     private static Account findAccount(int accNo) throws AccountNotFoundException {
