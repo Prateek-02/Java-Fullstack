@@ -69,7 +69,6 @@ public class MiniTextEditor {
 	
 	private static void saveStateForUndo() {
 		undoStack.push(text.toString());
-//		redoStack.clear();
 	}
 	
 	public static void addText(String s) {
