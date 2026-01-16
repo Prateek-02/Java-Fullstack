@@ -1,4 +1,4 @@
-public class Q8 {
+public class Q8{
     public static void main(String[] args) {
         int avgOrderValue = 500;
         int orderAmount = 503;
