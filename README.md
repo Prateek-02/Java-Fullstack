@@ -7,7 +7,7 @@ The code in this repository is written as part of structured learning and daily 
 ---
 
 ## Repository Structure
-
+```
 Java-Fullstack/
 ├── Java-Training/
 │ ├── Collection/
