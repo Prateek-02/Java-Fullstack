@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author prate
+ *
+ */
+module JavaProject {
+}
