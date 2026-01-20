@@ -10,7 +10,6 @@ public class RobotNavigationSystem {
 	static Scanner sc = new Scanner(System.in);
 	
 	public static void main(String[] args) {
-		int choice;
 		boolean flag = true;
 		do {
 			System.out.println("1. Move Forward");
@@ -20,8 +19,8 @@ public class RobotNavigationSystem {
 			System.out.println("5. Show Current Position");
 			System.out.println("6. Exit Program");
 			
-			System.out.println("Enter choice: ");
-			choice = sc.nextInt();
+			System.out.print("Enter choice: ");
+			int choice = sc.nextInt();
 			switch(choice) {
 				case 1:
 					moveForward();
@@ -45,33 +44,75 @@ public class RobotNavigationSystem {
 					
 			}
 		}
-		while(!flag);
+		while(flag);
 	}
 	
 	private static void moveForward() {
 		System.out.print("Enter forward steps: ");
-		String steps = sc.nextLine();
+		int steps = sc.nextInt();
+		String move = "Forward " + steps;
 		
-		backStack.push(steps);
+		backStack.push(move);
 		forwardStack.clear();
-		position += Integer.valueOf(steps);
+		position += steps;
+		
+		System.out.println(move);
 	}
 	
 	private static void moveBackward() {
-		System.out.println("Enter backward steps: ");
-		String steps = sc.nextLine();
-		
-		backStack.push(steps);
+		System.out.print("Enter backward steps: ");
+		int steps = sc.nextInt();
+		String move = "Backward " + steps;
+		backStack.push(move);
 		forwardStack.clear();
-		position -= Integer.valueOf(steps);
+		position -= steps;
+		
+		System.out.println(move);
 	}
 	
 	private static void undoMove() {
-		backStack.pop();
+		if(backStack.empty()) {
+			System.out.println("No moves to undo");
+			return;
+		}
+		
+		String lastMove = backStack.pop();
+		String parts[] = lastMove.split(" ");
+		String direction = parts[0];
+		int steps = Integer.parseInt(parts[1]);
+		
+		if(direction.equals("Forward")) {
+			position -= steps;
+		}
+		else {
+			position += steps;
+		}
+		
+		forwardStack.push(lastMove);
+		System.out.println("Undo");
 		
 	}
 	
 	private static void redoMove() {
+		if(forwardStack.empty()) {
+			System.out.println("Nothing to redo");
+			return;
+		}
+		
+		String redoMove = forwardStack.pop();
+		String parts[] = redoMove.split(" ");
+		String direction = parts[0];
+		int steps = Integer.parseInt(parts[1]);
+		
+		if(direction.equals("Forward")) {
+			position += steps;
+		}
+		else {
+			position -= steps;
+		}
+		
+		backStack.push(redoMove);
+		System.out.println("Redo");
 		
 	}
 }
