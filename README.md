@@ -14,8 +14,17 @@ Java-Fullstack/
 │ ├── TypeCasting/
 │ ├── constructor/
 │ ├── encapsulation/
+| ├── ExceptionHandling/
+| ├── FileHandling/
+| ├── Thread/
+| ├── Lambdafunctions/
 │ ├── OnlineBanking/
 │ ├── ObjectClass/
+| ├── TopBrainsComparable/
+| ├── TopBrainsComparator/
+| ├── TopBrainsStack/
+| ├── TopBriansEnum/
+| ├── TopBrainsWrapperClass/
 │ ├── 12jan/
 │ ├── 19decAssignment/
 │ ├── 20decAssignment/
@@ -23,6 +32,9 @@ Java-Fullstack/
 │ ├── 23dec/
 │ ├── 24dec/
 │ ├── 26dec/
+| ├── 30dec/
+| ├── 3jan/
+| ├── 9jan/
 │ └── notes.txt
 ├── .gitignore
 └── README.md
