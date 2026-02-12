@@ -1,0 +1,14 @@
+<hibernate-mapping>
+    <class name="com.capg.hibernate.Employee" table="EMPLOYEE">
+
+        <id name="eno" column="ENO" type="int">
+            <generator class="assigned"/>
+        </id>
+
+        <property name="ename" column="ENAME" type="string"/>
+        <property name="sal" column="SAL" type="string" length="100"/>
+        <property name="hiredate" column="HIREDATE" type="long"/>
+ 
+
+    </class>
+</hibernate-mapping>
