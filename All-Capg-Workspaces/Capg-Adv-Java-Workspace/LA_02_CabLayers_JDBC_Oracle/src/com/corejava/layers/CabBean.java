@@ -8,6 +8,10 @@ public class CabBean implements Serializable{
 	private double price;
 	private String category;
 	
+	public CabBean() {
+		
+	}
+	
 	public int getCarId() {
 		return carId;
 	}
