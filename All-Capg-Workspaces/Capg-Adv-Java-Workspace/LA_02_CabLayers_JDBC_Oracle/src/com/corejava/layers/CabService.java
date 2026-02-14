@@ -36,23 +36,23 @@ public class CabService {
 	}
 	
 	public CabBean loadCab(int id) throws Exception{
-		CabDAO dao = new CabDAO();
-		CabBean  cb = dao.getCab(id);
+		CabDAO cabDAO = new CabDAO();
+		CabBean  cb = cabDAO.getCab(id);
 		
 		return cb;
 	}
 	
 	public int updateCab(int id , String newname) throws Exception{
-		CabDAO dao = new CabDAO();
+		CabDAO cabDAO = new CabDAO();
 		
-		int k = dao.updateCab(id , newname);
+		int k = cabDAO.updateCab(id , newname);
 		return k;
 	}
 	
 	public int deleteCab(int id) throws Exception{
-		CabDAO dao = new CabDAO();
+		CabDAO cabDAO = new CabDAO();
 		
-		int k = dao.deleteCab(id);
+		int k = cabDAO.deleteCab(id);
 		return k;
 	}
 	
