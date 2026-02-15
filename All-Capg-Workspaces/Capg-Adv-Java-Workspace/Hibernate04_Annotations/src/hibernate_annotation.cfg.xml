@@ -37,7 +37,7 @@
 		</property>
 
 		<!-- Mapping POJO to TABLE in underlying Database. -->
-		<mapping class = "com.capg.hibernate.Employee"/>
+		<mapping class = "com.capg.assessment.bean.BankBean"/>
 
 	</session-factory>
 </hibernate-configuration>
