@@ -31,17 +31,13 @@ public class Client {
 		em.getTransaction().commit();
 		
 		System.out.println("Added one student with address to database.");
-		
-		
 				
-				
-				System.out.println(homeAddress.getCity());
-								
-				System.out.println(" student  State  address : "+student.getAddress().getState());
-	
-				System.out.println(" student  City  address : "+student.getAddress().getCity());
-				System.out.println(" student  Street  address : "+student.getAddress().getStreet());
-				System.out.println(" student  ZipCode  address : "+student.getAddress().getZipCode());
+		System.out.println(homeAddress.getCity());	
+		System.out.println(" student  State  address : "+student.getAddress().getState());
+		System.out.println(" student  City  address : "+student.getAddress().getCity());
+		System.out.println(" student  Street  address : "+student.getAddress().getStreet());
+		System.out.println(" student  ZipCode  address : "+student.getAddress().getZipCode());
+		
 		em.close();
 		factory.close();
 	}

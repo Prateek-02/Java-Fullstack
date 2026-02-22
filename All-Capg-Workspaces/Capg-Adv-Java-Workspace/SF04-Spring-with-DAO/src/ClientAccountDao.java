@@ -5,10 +5,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class ClientAccountDao {
 	public static void main(String[] args)  //Step :1
 	{  
-		
-ApplicationContext factory = new ClassPathXmlApplicationContext("applicationContext_Dao.xml"); //Step :2
-		
-AccountDao accDao = (AccountDao)factory.getBean("accountDao"); //Step :3
+		ApplicationContext factory = new ClassPathXmlApplicationContext("applicationContext_Dao.xml"); //Step :2
+		AccountDao accDao = (AccountDao)factory.getBean("accountDao"); //Step :3
 
      // Bean
 		Account account = new Account();  //Step 12

@@ -96,7 +96,8 @@ public class AccountDaoImpl implements AccountDao {
 				rs.close();
 				stmt.close();
 				con.close();
-			} catch (SQLException e) {
+			} 
+			catch (SQLException e) {
 				e.printStackTrace();
 			}
 
@@ -107,12 +108,76 @@ public class AccountDaoImpl implements AccountDao {
 	@Override
 	public void remove(int accno) {
 		// TODO Auto-generated method stub
+		Connection con = null;
+		Statement stmt = null;
+		try {
+			// Get connection.
+			con = dataSource.getConnection();
+			// Create statement object.
+			stmt = con.createStatement();
+			// Prepare query.
+			String query = "DELETE FROM account WHERE ACC_NO= "+accno;
+			
+			int rowsAffected = stmt.executeUpdate(query);
+			if (rowsAffected > 0) {
+				System.out.println("Account " + accno + " deleted successfully.");
+			} else {
+				System.out.println("No account found with account number: " + accno);
+			}
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		// Release resources to avoid memory leaks.
+		finally {
+			try {
+				stmt.close();
+				con.close();
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 
 	}
 
 	@Override
-	public void update(Account accout) {
+	public void update(Account account) {
 		// TODO Auto-generated method stub
+		System.out.println("AccountDaoImpl  update()");
+		// Declare resources
+		Connection connection = null;
+		Statement stmt = null;
+		
+		try {
+			// Get connection
+			connection = dataSource.getConnection();
+			// Create statement
+			stmt = connection.createStatement();
+			// Build the query directly with values inserted into the string
+			String query = "UPDATE account SET ACC_NAME='" + account.getAccName() +
+						   "', ACC_TYPE='" + account.getAccType() +
+						   "', BAL=" + account.getBal() +
+						   " WHERE ACC_NO=" + account.getAccno();
+			// Execute the update
+			int rowsAffected = stmt.executeUpdate(query);
+			if (rowsAffected > 0) {
+				System.out.println("Account " + account.getAccno() + " updated successfully.");
+			} else {
+				System.out.println("No account found with account number: " + account.getAccno());
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		// Clean up resources to avoid memory leaks
+		finally {
+			try {
+				stmt.close();
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 
 	}
 

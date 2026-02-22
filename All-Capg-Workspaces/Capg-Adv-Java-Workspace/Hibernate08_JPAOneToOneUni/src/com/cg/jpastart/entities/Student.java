@@ -22,12 +22,12 @@ public class Student implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int studentId;
 	
-     private String name;
+    private String name;
 	
-	 @OneToOne(cascade=CascadeType.ALL)
+	@OneToOne(cascade=CascadeType.ALL)
 	 
-	 @JoinColumn(name = "ADDRESS_ID")
-	 private Address address;
+	@JoinColumn(name = "ADDRESS_ID")
+	private Address address;
 	
 	public Address getAddress() {
 		return address;
