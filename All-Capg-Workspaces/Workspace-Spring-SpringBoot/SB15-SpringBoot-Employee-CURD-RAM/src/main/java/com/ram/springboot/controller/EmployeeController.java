@@ -1,4 +1,4 @@
-package com.capg.springboot.controller;
+package com.ram.springboot.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,55 +14,55 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.capg.springboot.dao.MovieNotFoundException;
-import com.capg.springboot.entities.Movie;
-import com.capg.springboot.service.MovieServicel;
+import com.ram.springboot.dao.EmployeeNotFoundException;
+import com.ram.springboot.entities.Employee;
+import com.ram.springboot.service.EmployeeServiceI;
 
 @RestController
-@RequestMapping(value="movie")
+@RequestMapping(value="employee")
 
 //Connecting ... to Angular 
 //@CrossOrigin("http://localhost:4200")
 //@CrossOrigin("http://localhost:3000")
-public class MovieController {
+public class EmployeeController {
 	@Autowired
-    private MovieServicel service;
+    private EmployeeServiceI service;
 	
 	
-	@PostMapping(path="/add")
-	public ResponseEntity<Boolean> addMovie(@RequestBody Movie movie) {
-		service.AddMovie(movie);
+	@PostMapping(path="/create")
+	public ResponseEntity<Boolean> CreateEmployee(@RequestBody Employee emp) {
+		service.CreateEmployee(emp);
 		ResponseEntity<Boolean> responseEntity = new ResponseEntity(true, HttpStatus.OK);
 		System.out.println("response entity=" + responseEntity);
 		return responseEntity;
 	}
 	
-	@GetMapping(path="/getdetails/{mId}")
-	public ResponseEntity<Movie> findMovieById(@PathVariable("mId") long mId) {
-		Movie emp=service.findMovieById(mId);
+	@GetMapping(path="/getdetails/{empId}")
+	public ResponseEntity<Employee> findEmployeeById(@PathVariable("empId") long empId) {
+		Employee emp=service.findEmployeeById(empId);
 		if (emp == null) {
-            throw new MovieNotFoundException("movie not found for id=" + mId);
+            throw new EmployeeNotFoundException("employee not found for id=" + empId);
         }
-		return new ResponseEntity<Movie>(emp,new HttpHeaders(),HttpStatus.OK);
+		return new ResponseEntity<Employee>(emp,new HttpHeaders(),HttpStatus.OK);
 	}
 	// http://localhost:9999/employee/getAll
 	//@RequestMapping(value="employee")
 	@GetMapping(path="/getAll")
-	public  ResponseEntity<List<Movie>> findAll(){
-		List<Movie> list=service.findAllMovies();
+	public  ResponseEntity<List<Employee>> findAll(){
+		List<Employee> list=service.findAllEmployees();
 		
-		return new ResponseEntity<List<Movie>>(list,new HttpHeaders(),HttpStatus.OK);
+		return new ResponseEntity<List<Employee>>(list,new HttpHeaders(),HttpStatus.OK);
 	}
 	
 	@PutMapping(path="/update")
-	public ResponseEntity<Movie> updateEmployee(@RequestBody Movie movie){
-		movie=service.updateMovie(movie);
-		return new ResponseEntity<Movie>(movie,new HttpHeaders(),HttpStatus.OK);
+	public ResponseEntity<Employee> updateEmployee(@RequestBody Employee emp){
+		emp=service.updateEmployee(emp);
+		return new ResponseEntity<Employee>(emp,new HttpHeaders(),HttpStatus.OK);
 	}
 	
-	@DeleteMapping(path="/delete/{mId}")
-	public String deleteEmployee(@PathVariable("mId") Long mId) {
-		service.deleteMovie(mId);
+	@DeleteMapping(path="/delete/{empId}")
+	public String deleteEmployee(@PathVariable("empId") Long empId) {
+		service.deleteEmployee(empId);
 		return "Deleted";
 	}
 }
