@@ -8,4 +8,5 @@ import com.demoorg.empservice.model.Employee;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer>{
 
+	
 }

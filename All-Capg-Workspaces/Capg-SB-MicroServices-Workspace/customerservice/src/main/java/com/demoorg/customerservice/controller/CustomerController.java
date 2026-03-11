@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.demoorg.customerservice.model.Customer;
 import com.demoorg.customerservice.repository.CustomerRepository;
 
-
-
 @RestController
 @RequestMapping("/customer")
 public class CustomerController {
@@ -31,7 +29,7 @@ public class CustomerController {
 	}
 	
 	@GetMapping("/getcust/{cid}")
-	public Optional<Customer> getCustomer(@PathVariable int cid) {
+	public Optional<Customer> getCustomer(@PathVariable("cid") int cid) {
 		return customerRepository.findById(cid);
 	}
 	
@@ -40,17 +38,23 @@ public class CustomerController {
 		customerRepository.save(customer);
 		return "Customer added with Id: " + customer.getCId();
 	}
-	
+		
 	@PutMapping("/updatecust/{cid}")
 	public String updateCustomer(@PathVariable int cid, @RequestBody Customer customer) {
-		customer.setCId(cid);
-	    customerRepository.save(customer);
-	    return "Customer updated with Id: " + cid;
+		if (customerRepository.existsById(cid)) {
+            customer.setCId(cid);
+            customerRepository.save(customer);
+            return "Customer updated with Id: " + cid;
+        }
+        return "Customer not found with Id: " + cid;
 	}
 	
 	@DeleteMapping("/delete/{cid}")
 	public String deleteCustomer(@PathVariable int cid) {
-		customerRepository.deleteById(cid);
-		return "Customer deleted with Id: "+cid;
+		if (customerRepository.existsById(cid)) {
+            customerRepository.deleteById(cid);
+            return "Customer deleted with Id: " + cid;
+        }
+        return "Customer not found with Id: " + cid;
 	}
 }
