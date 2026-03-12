@@ -13,6 +13,6 @@ public class BookController {
 	// http://localhost:8001/books/101
 	@GetMapping("/{bookId}")
 	public Book getBookById(@PathVariable String bookId) {
-		return new Book(bookId , "Spring Book","Rod Johnson", 599.0);
+		return new Book(bookId , "SpringBoot Book","Rod Johnson", 599.0);
 	}
 }
