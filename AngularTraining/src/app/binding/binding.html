@@ -1,0 +1,27 @@
+<p>binding works!</p>
+
+<!-- interpolation -->
+<h1>{{ user }}</h1>
+<p>{{ obj.user }}</p>
+<p>{{ obj.age }}</p>
+<p>{{ obj.state }}</p>
+<h1>{{ data() }}</h1>
+<h1>{{ arr.length }}</h1>
+<h1>{{arr}}</h1>
+
+<!--property-binding-->
+<input type="text" [disabled]="result"/>
+<img [src]="image" alt="">
+
+
+<!--event binding-->
+<h1>{{count}}</h1>
+<button (click)="handleClick(true);SecondClick()">click</button>
+<br><br>
+
+<input type="text" (input)="handleInput($event)">
+<p>{{inputValue}}</p>
+
+<label for="">Username: </label>
+<input type="text" [(ngModel)] = "inputData">
+<h3>{{inputData}}</h3>
