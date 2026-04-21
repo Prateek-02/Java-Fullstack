@@ -1,9 +1,98 @@
 <p>child works!</p>
-<h1>{{data}}</h1>
+<!-- <h1>{{data}}</h1>
 <h2>{{val}}</h2>
-<h2>{{loginVal}}</h2>
-<h2></h2>
+<h2>{{loginVal}}</h2> -->
+
 <!-- <h2>@for (val of arrVal; track $index) {
     {{val}}
 }</h2> -->
-<h2>{{arrVal}}</h2>
+<!-- <h2>{{arrVal}}</h2> -->
+
+
+<!-- Child -> Parent -->
+<!-- <button (click)="result()">Send Data To Parent</button> -->
+
+<!-- Content Projection -->
+<!-- <ng-content></ng-content> -->
+
+<h1>Directives</h1>
+
+<h2>Attribute - Directives</h2>
+
+<h3>Topic - ngClass</h3>
+<h1 [ngClass]="{active,change}">Hello</h1>
+<button (click)="handleClass()">Toggle Class</button>
+
+<!-- <p [ngStyle] = "{color : col, backgroundColor: bg }">abc</p> -->
+
+<h3>Topic - ngStyle</h3>
+<p [ngStyle]= "useFirstStyle ? css : css2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet omnis labore voluptate, sapiente iste mollitia sint
+    iure explicabo quaerat. Aspernatur, maxime consectetur, ratione optio accusamus numquam aliquid sed mollitia
+    explicabo sequi repellat atque quo adipisci quisquam tempore repudiandae minus quis labore at reiciendis debitis
+    laboriosam doloremque placeat ab? Rerum, eligendi.
+</p>
+<button (click)="changeStyle()">Change Style</button>
+<br><br>
+
+
+<h2>Structural Directives</h2>
+<h3>Topic - ngIf</h3>
+<button (click)="handleLogin(true)">Login</button>
+<button (click)="handleLogin(false)">Logout</button>
+
+<div *ngIf="isLoggedIn; else failed">
+    <h2>Login Successfull</h2>
+    <h3>Welcome to the website</h3>
+</div>
+
+<ng-template #failed>
+    <h3>Logged out Successfully</h3>
+</ng-template>
+
+<h3> Topic - ngFor</h3>
+<div *ngFor = "let data of arr">
+    <h3>{{data}}</h3>
+</div>
+
+<!-- <h3> Topic - ngSwitch</h3>
+<div [ngSwitch]="user">
+    <p *ngSwitchCase="'admin'">this is Admin</p>
+    <p *ngSwitchCase="'user'">this is User</p>
+    <p *ngSwitchCase="'guest'">this is Guest</p>
+    <p *ngSwitchDefault>unauthorized user</p>
+</div> -->
+
+<h2>Control Flow Statements</h2>
+@if (user === 'admin'){
+    <h3>This is admin Dashboard</h3>
+}
+@else if(user === 'user'){
+    <h3>Thus is User Dashboard</h3>
+}
+@else if(user === 'guest'){
+    <h3>Thus is Guest Dashboard</h3>
+}
+@else {
+    <h3>Unauthorized User</h3>
+}
+
+
+@for (item of arr; track $index) {
+    <h3>{{$index}} - {{item}}</h3>
+}
+
+
+@switch (user) {
+    @case ('admin') {
+        <h3>This is Admin Dashboard</h3>
+    }
+    @case ('user') {
+        <h3>"This is User Dashboard</h3>
+    }
+    @case ('guest') {
+        <h3>"This is Guest Dashboard</h3>
+    }
+    @default {
+        <h3>Unauthorized User</h3>
+    }
+}
