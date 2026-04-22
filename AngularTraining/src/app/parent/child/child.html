@@ -15,17 +15,17 @@
 <!-- Content Projection -->
 <!-- <ng-content></ng-content> -->
 
-<h1>Directives</h1>
+<h1><u>Directives</u></h1>
 
-<h2>Attribute - Directives</h2>
+<h2><u>Attribute - Directives</u></h2>
 
-<h3>Topic - ngClass</h3>
+<h3><u>Topic - ngClass</u></h3>
 <h1 [ngClass]="{active,change}">Hello</h1>
 <button (click)="handleClass()">Toggle Class</button>
 
 <!-- <p [ngStyle] = "{color : col, backgroundColor: bg }">abc</p> -->
 
-<h3>Topic - ngStyle</h3>
+<h3><u>Topic - ngStyle</u></h3>
 <p [ngStyle]= "useFirstStyle ? css : css2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet omnis labore voluptate, sapiente iste mollitia sint
     iure explicabo quaerat. Aspernatur, maxime consectetur, ratione optio accusamus numquam aliquid sed mollitia
     explicabo sequi repellat atque quo adipisci quisquam tempore repudiandae minus quis labore at reiciendis debitis
@@ -35,8 +35,8 @@
 <br><br>
 
 
-<h2>Structural Directives</h2>
-<h3>Topic - ngIf</h3>
+<h2><u>Structural Directives</u></h2>
+<h3><u>Topic - ngIf</u></h3>
 <button (click)="handleLogin(true)">Login</button>
 <button (click)="handleLogin(false)">Logout</button>
 
@@ -49,7 +49,7 @@
     <h3>Logged out Successfully</h3>
 </ng-template>
 
-<h3> Topic - ngFor</h3>
+<h3><u>Topic - ngFor</u></h3>
 <div *ngFor = "let data of arr">
     <h3>{{data}}</h3>
 </div>
@@ -62,7 +62,7 @@
     <p *ngSwitchDefault>unauthorized user</p>
 </div> -->
 
-<h2>Control Flow Statements</h2>
+<h2><u>Control Flow Statements</u></h2>
 @if (user === 'admin'){
     <h3>This is admin Dashboard</h3>
 }
@@ -96,3 +96,19 @@
         <h3>Unauthorized User</h3>
     }
 }
+
+<h2><u>Pipes</u></h2>
+
+<h3>Username: {{ userName | titlecase}}</h3>
+<h3>Username: {{ userName | uppercase}}</h3>
+<h3>Username: {{ userName | lowercase}}</h3>
+<h3>Date: {{ date | date}}</h3>
+<h3>Date: {{ date | date: 'short'}}</h3>
+<h3>Date: {{ date | date: 'fullDate'}}</h3>
+<h3>Price: {{ price | currency}}</h3>
+<h3>Price: {{ price | currency: 'INR'}}</h3>
+<h3>Price: {{ price | currency: 'EUR'}}</h3>
+<h3>Price: {{ price | currency: 'CNY'}}</h3>
+<h3>Price: {{ price | currency: 'JPY'}}</h3>
+<h3>Object Data: {{ userData | json }}</h3>
+<h3>Sliced Data: {{ userName | slice: 1:3 }}</h3>

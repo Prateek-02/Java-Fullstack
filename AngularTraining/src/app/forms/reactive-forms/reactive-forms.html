@@ -1,0 +1,30 @@
+<p>reactive-forms works!</p>
+<!-- <input type="text" name="" id="" [formControl] = "userName">
+<br><br>
+<input type="password" name="" id="" [formControl] = "password">
+<br><br>
+<button type="submit" (click)="onSubmit()">Submit</button> -->
+
+<form [formGroup]="logIn" (ngSubmit)="getValue()">
+    <label for="a">Username: </label>
+    <input type="text" name="username" id="a" formControlName="userName" required>
+    @if(logIn.get('userName')){
+        <p style="color: red;">Username cannot be Empty</p>
+    }
+    <br><br>
+    <label for="b">Password: </label>
+    <input type="password" name="password" id="b" formControlName="password" required>
+    @if(logIn.get('password')){
+        <p style="color: red;">Username cannot be Empty</p>
+    }
+    <br><br>
+    <button>Submit</button>
+
+</form>
+
+<h3>Pristine: {{logIn.pristine}}</h3>
+<h3>Dirty: {{logIn.dirty}}</h3>
+<h3>Untouched: {{logIn.untouched}}</h3>
+<h3>Touched: {{logIn.touched}}</h3>
+<h3>Valid: {{logIn.valid}}</h3>
+<h3>Invalid: {{logIn.invalid}}</h3>

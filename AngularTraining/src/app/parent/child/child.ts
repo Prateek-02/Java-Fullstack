@@ -72,10 +72,24 @@ export class Child {
   //2. ngFor
   arr = ["Java","C++","React","Angular","JavaScript"];
 
-  //3. ngSwith
+  //3. ngSwitch
   user = "admin";
 
 
+  // Pipe
+  userName = "SaNjAnA cHaNdeL";
+  date = new Date();
+  price = 100;
 
+  userData={
+    id:1,
+    firstName:"Prateek",
+    lastName:'Sinha',
+    age:22,
+    address:{
+      state:'Jharkhand',
+      city:'Giridih'
+    }
+  }
 
 }
