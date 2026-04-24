@@ -7,18 +7,26 @@
 
 <form [formGroup]="logIn" (ngSubmit)="getValue()">
     <label for="a">Username: </label>
-    <input type="text" name="username" id="a" formControlName="userName" required>
-    @if(logIn.get('userName')){
-        <p style="color: red;">Username cannot be Empty</p>
-    }
+    <input type="text" name="username" id="a" formControlName="userName" 
+        [ngClass]="{
+            valid: logIn.get('userName')?.valid,
+            invalid: logIn.get('userName')?.invalid
+        }"
+    >
     <br><br>
     <label for="b">Password: </label>
-    <input type="password" name="password" id="b" formControlName="password" required>
-    @if(logIn.get('password')){
-        <p style="color: red;">Username cannot be Empty</p>
-    }
+    <input type="password" name="password" id="b" formControlName="password"
+        [ngClass]="{
+            valid: logIn.get('password')?.valid,
+            invalid: logIn.get('password')?.invalid
+        }"
+    >
+    
     <br><br>
     <button>Submit</button>
+    @if(logIn.get('userName')?.touched || logIn.get('password')?.touched){
+        <p style="color: red;">Cannot Submit Without Username</p>
+    }
 
 </form>
 
@@ -28,3 +36,4 @@
 <h3>Touched: {{logIn.touched}}</h3>
 <h3>Valid: {{logIn.valid}}</h3>
 <h3>Invalid: {{logIn.invalid}}</h3>
+

@@ -1,9 +1,10 @@
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-forms',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, NgClass],
   templateUrl: './reactive-forms.html',
   styleUrl: './reactive-forms.css',
 })
@@ -16,8 +17,8 @@ export class ReactiveForms {
   // }
 
   logIn = new FormGroup({
-    userName: new FormControl(''),
-    password: new FormControl('')
+    userName: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    password: new FormControl('', [Validators.required, Validators.minLength(6)])
 
   })
 

@@ -1,0 +1,89 @@
+<p>form-task works!</p>
+<h1>Registration Form</h1>
+<fieldset>
+    <form [formGroup]="regForm" (ngSubmit)="getData()">
+        <label for="fName">First Name: </label>
+        <input type="text" name="fName" id="" formControlName="fName" 
+            [ngClass]="{
+                valid: regForm.get('fName')?.valid,
+                invalid: regForm.get('fName')?.invalid
+            }"
+        >
+        <label for="lName">Last Name: </label>
+        <input type="text" name="lName" id="" formControlName="lName" (input)="lNameField()"
+            [ngClass]="{
+                valid: regForm.get('lName')?.valid,
+                invalid: regForm.get('lName')?.invalid
+            }"
+        >
+        <br><br>
+        <label for="pNo">Ph No.: </label>
+        <input type="number" name="pNo" id="" formControlName="pNo"
+            [ngClass]="{
+                valid: regForm.get('pNo')?.valid,
+                invalid: regForm.get('pNo')?.invalid 
+            }"
+        >
+        
+        <button (click)="enableField()">Enable</button>
+        <button (click)="disableField()">Disable</button>
+        <label for="email">Email: </label>
+        <input type="text" name="email" id="" formControlName="email"
+            [ngClass]="{
+                valid: regForm.get('email')?.valid,
+                invalid: regForm.get('email')?.invalid
+            }"
+        >
+        <br><br>
+        <label for="gender">Gender: </label>
+        <br>
+        Male <input type="radio" name="gender" id="" value="male" formControlName="gender">
+        <br>
+        Female <input type="radio" name="gender" id="" value="female" formControlName="gender">
+        <br>
+        Others <input type="radio" name="gender" id="" value="others" formControlName="gender">
+        
+        <br>
+        <label for="">Select Subject: </label>
+        <br>
+        <select name="subject" id="" formControlName="subject">
+            <option value="html" >Html</option>
+            <option value="css">Css</option>
+            <option value="js">Js</option>
+            <option value="ts">Ts</option>
+            <option value="angular">Angular</option>
+        </select>
+        
+        <h2>Address</h2>
+        <hr>
+        <label for="state" >State: </label>
+        <input type="text" name="state" id="" formControlName="state"
+            [ngClass]="{
+                valid: regForm.get('state')?.valid,
+                invalid: regForm.get('state')?.invalid
+            }"
+        >
+        <label for="city">City: </label>
+        <input type="text" name="city" id="" formControlName="city"
+            [ngClass]="{
+                valid: regForm.get('city')?.valid,
+                invalid: regForm.get('city')?.invalid
+            }"
+        >
+        
+        <br><br>
+        <label for="pincode">Pincode: </label>
+        <input type="number" name="pincode" id="" formControlName="pincode"
+            [ngClass]="{
+                valid: regForm.get('pincode')?.valid,
+                invalid: regForm.get('pincode')?.invalid
+            }"
+        > 
+        <label for="date">Date: </label>
+        <input type="date" name="date" id="" formControlName="date">
+        <br><br>
+        <button>Reset</button>
+        <button>Submit</button>
+
+    </form>
+</fieldset>

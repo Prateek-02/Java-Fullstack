@@ -11,7 +11,9 @@
         #pass="ngModel" required minlength="6"
     >
     @if(pass.invalid && pass.touched){
-        <p style="color: red;">Cannot login without Password</p>
+        @if(pass.errors?.['required']){
+            <p>this field is required</p>
+        }
     }
     <br><br>
     <button type="submit" [disabled] = "loginForm.invalid">Login</button>

@@ -1,0 +1,21 @@
+<p>dashboard works!</p>
+<button (click)="createData()">Add Data</button>
+<button (click)="update()">Update Data</button>
+<button (click)="delete()">Delete Data</button>
+@if(productList == undefined){
+    <p class="load">Content is Loading</p>
+}
+@else {
+    @for (item of productList; track $index) {
+        <h2>{{item.id}}</h2>
+        <h3>{{item.title}}</h3>
+        <p>{{item.description}}</p>
+        <p>{{item.price}}</p>
+        <img [src]="item.images" height="200px">
+    }
+}
+
+
+
+
+
